@@ -1,0 +1,70 @@
+[
+  {
+    "Key": "PSAvoidOverwritingBuiltInCmdlets|function Write-Log {",
+    "Count": 1
+  },
+  {
+    "Key": "PSAvoidUsingConvertToSecureStringWithPlainText|ConvertTo-SecureString $plainPass -AsPlainText -Force",
+    "Count": 2
+  },
+  {
+    "Key": "PSAvoidUsingEmptyCatchBlock|catch {}",
+    "Count": 34
+  },
+  {
+    "Key": "PSReviewUnusedParameter|$Timestamp",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseApprovedVerbs|Generate-AuditReport",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseApprovedVerbs|HC-Line",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseApprovedVerbs|HE-Line",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseApprovedVerbs|Load-AuditGrid",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseApprovedVerbs|Load-DebugDetail",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseApprovedVerbs|Load-DebugGrid",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseApprovedVerbs|Truncate-SAM",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseShouldProcessForStateChangingFunctions|New-Lbl",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseShouldProcessForStateChangingFunctions|New-TempPassword",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseShouldProcessForStateChangingFunctions|New-Txt",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseShouldProcessForStateChangingFunctions|Update-BulkRow",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseSingularNouns|Add-UserToAUs",
+    "Count": 1
+  },
+  {
+    "Key": "PSUseSingularNouns|Get-AUCodes",
+    "Count": 1
+  }
+]

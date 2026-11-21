@@ -1,0 +1,14 @@
+# Real settings and secrets never go in the repo
+ADProvisioningTool.json
+ADProvisioningTool.config
+# Logs and reports
+logs/
+*.csv
+*.html
+# Built outputs
+*.exe
+out/
+TestResults.xml
+# Icons and other binaries
+*.ico
+*.zip

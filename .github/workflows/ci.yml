@@ -1,0 +1,39 @@
+name: Checks and build
+
+permissions:
+  contents: read
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: powershell   # Windows PowerShell 5.1, the same engine the tool runs on
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install modules
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module Pester -MinimumVersion 5.5.0 -Scope CurrentUser -Force -SkipPublisherCheck
+          Install-Module PSScriptAnalyzer -Scope CurrentUser -Force
+          Install-Module ps2exe -Scope CurrentUser -Force
+
+      - name: Run checks
+        run: .\Build\Invoke-CIChecks.ps1 -TestResultPath TestResults.xml
+
+      - name: Build exe
+        run: .\Build\Build-Exe.ps1 -SkipChecks -OutputPath out\ADProvisioningTool.exe
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestResults
+          path: TestResults.xml
+          if-no-files-found: ignore
